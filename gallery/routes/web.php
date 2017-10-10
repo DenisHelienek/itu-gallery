@@ -20,13 +20,16 @@ Route::get('/albums', function () {
 });
 
 Route::get('/albums/1', function () {
-    return view('/application/albums2');
+    return view('/application/albums1');
 });
 
 Route::get('/albums/2', function () {
     return view('/application/albums2');
 });
 
+Route::get('/parameters', function () {
+    return view('/application/parameters');
+});
 
 Route::get('/examples', function () {
     return view('examples');
