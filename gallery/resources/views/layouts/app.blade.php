@@ -15,7 +15,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-inverse navbar-static-top">
+        <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
 
@@ -34,10 +34,9 @@
                 </div>
 
                 <ul class="nav navbar-nav">
-                    <li><a href="/sablony">odkaz1</a></li>
-                    <li><a href="#">odkaz2</a></li>
-                    <li><a href="#">odkaz3</a></li>
-                    <li><a href="#">odkaz4</a></li>
+                    <li><a href="/albums">Make albums</a></li>
+                    <li><a href="/examples">Examples</a></li>
+                    <li><a href="/project">About Project</a></li>
                     
                 </ul>
             </div>
