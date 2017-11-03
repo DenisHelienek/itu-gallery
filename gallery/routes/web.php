@@ -11,9 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+
+/*
 
 Route::get('/albums', function () {
     return view('albums');
@@ -38,7 +37,54 @@ Route::get('/examples', function () {
 Route::get('/project', function () {
     return view('project');
 });
+*/
 
-/*Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');*/
+Route::get('/', function () {
+    return view('home');
+});
+
+Route::get('/examples', function () {
+    return view('examples');
+});
+
+Route::get('/about', function () {
+    return view('about');
+});
+
+Route::get('/user', function () {
+    return view('/application/user');
+});
+
+Route::get('/login', function () {
+    return view('/application/login');
+});
+
+Route::get('/register', function () {
+    return view('/application/register');
+});
+
+
+
+Route::get('/gallery', function () {
+    return view('/application/gallery');
+});
+
+Route::get('/albums', function () {
+    return view('/application/albums');
+});
+
+Route::get('/parameters', function () {
+    return view('/application/parameters');
+});
+
+Route::get('/demo', function () {
+    return view('/application/demo');
+});
+
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
