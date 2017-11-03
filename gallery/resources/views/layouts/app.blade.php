@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Web photogallery</title>
+    <title>WebGallery Maker</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -16,12 +16,12 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
-            <div class="container">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
                 <div class="navbar-header">
 
                     <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#app-navbar-collapse">
                         <span class="sr-only">Toggle Navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -30,14 +30,15 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        <i class="fa fa-camera"></i> Web photogallery-maker
+                        <i class="fa fa-camera"></i> WebGallery Maker
                     </a>
                 </div>
 
                 <ul class="nav navbar-nav">
-                    <li><a href="/albums">Make albums</a></li>
+                    <li><a href="/gallery">Create gallery</a></li>
                     <li><a href="/examples">Examples</a></li>
-                    <li><a href="/project">About Project</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/user"><i class="fa fa-user-circle" aria-hidden="true"></i></a></li>
                     
                 </ul>
             </div>
