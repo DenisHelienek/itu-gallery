@@ -184,3 +184,50 @@
 	margin-left: 70px;
 	color: black !important;	
 }
+
+.conditions {
+	font-size: 1.2em !important;
+}
+
+.demo {
+    margin-left: 900px;
+    width: 50%;
+    padding: 10px;	
+}
+
+.download {
+    margin-left: 900px;
+    width: 50%;
+    padding: 10px;	
+}
+
+.demo button {
+    background-color: #30302c;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    width: 150px;
+}
+
+.download button {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    width: 150px;
+}
+
+.accept {
+	font-size: 1.5em !important;
+	margin-left: 750px;	
+}
