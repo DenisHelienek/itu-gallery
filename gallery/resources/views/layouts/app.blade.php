@@ -87,7 +87,7 @@
         @yield('content')
     </div>
 
-    <div>
+    <div class="footer">
         <h2 class="text-center">Copyright &copy; 2017-2018 WebGallery Maker s.r.o.</h2>
     </div>
 

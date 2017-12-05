@@ -2,14 +2,18 @@
 .navbar {
 	margin-bottom: 0 !important;
 	border-radius: 0 !important;
-	font-size: 1.8em !important;
+	font-size: 1.7em !important;
 	color: white !important;
 }
 
 /* Style of brand */
 .navbar-brand {
-	font-size: 1.0em !important;
+	font-size: 0.9em !important;
 	color: white !important;
+}
+
+.footer h2{
+	font-size: 1.7em !important;
 }
 
 /* White text in navbar */
