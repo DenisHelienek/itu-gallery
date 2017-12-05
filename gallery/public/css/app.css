@@ -12,6 +12,7 @@
 	color: white !important;
 }
 
+/* Footer of website */
 .footer h2{
 	font-size: 1.7em !important;
 }
@@ -21,6 +22,7 @@
 	color: white !important;	
 }
 
+/* Buttons */
 .btn {
   border-radius: 0 !important;
 }
@@ -41,4 +43,61 @@
   }
 }
 
- 
+/* --- Create gallery --- */
+.c_next p{
+	font-size: 2.7em !important;
+	margin-top: 30px;
+	margin-right: 70px;
+	color: black !important;	
+}
+
+.albums ul {
+  list-style-type: none;
+}
+
+.albums a {
+    color: black !important;	
+}
+
+.albums li {
+	font-size: 1.3em !important;
+	margin-left: 40px;
+}
+
+.albums-list li {
+	font-size: 1.3em !important;
+	margin-left: 60px;
+}
+
+.albums-list a {
+    color: black !important;
+}
+
+.photos ul {
+	font-size: 1.3em !important;
+	list-style-type: none;
+}
+
+.photos img {
+	margin-bottom: 20px;
+	width: 70% !important;
+}
+
+.photos p {
+	font-size: 1.3em !important;
+	margin-top: 0px;
+	margin-left: 110px;
+}
+
+.photos a {
+	color: black !important;
+}
+
+.photos-list {
+	background-color: white;
+    display: inline-block;
+}
+
+.photos-list img:hover{
+	opacity: .5;	
+}

@@ -16,9 +16,9 @@
     
     <!-- Arrows werent showing -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
 </head>
 <body>
     <div id="app">
@@ -90,6 +90,7 @@
     <div class="footer">
         <h2 class="text-center">Copyright &copy; 2017-2018 WebGallery Maker s.r.o.</h2>
     </div>
-
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
