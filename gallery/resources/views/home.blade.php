@@ -1,8 +1,40 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container text-center">    
-        <h3>Welcome</h3><br>
-        <p>But I must explain to you how all this mistaken idea of denouncing             pleasure and praising pain was born and I will give you a complete account          of the system, and expound the actual teachings of the great explorer of            the truth, the master-builder of human happiness. No one rejects,       dislikes, or avoids pleasure itself, because it is pleasure, but because     those who do not know how to pursue pleasure rationally encounter         consequences that are extremely painful. Nor again is there anyone who       loves or pursues or desires to obtain pain of itself, because it is pain,        but because occasionally circumstances occur in which toil and pain can         procure him some great pleasure. To take a trivial example, which of us        ever undertakes laborious physical exercise, except to obtain some          advantage from it? But who has any right to find fault with a man who          chooses to enjoy a pleasure that has no annoying consequences, or one who           avoids a pain that produces no resultant pleasure</p>
-    </div><br>
+<div id="MainCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#MainCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#MainCarousel" data-slide-to="1"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="{{ asset('img/main1.jpg') }}" alt="Image">
+        <div class="carousel-caption">
+          <button type="button" class="btn btn-success btn-lg">Live preview</button> &nbsp; &nbsp;
+          <button type="button" class="btn btn-info btn-lg">Create gallery</button>
+        </div>      
+      </div>
+
+      <div class="item">
+        <img src="{{ asset('img/main2.jpg') }}" alt="Image">
+        <div class="carousel-caption">
+          <button type="button" class="btn btn-success btn-lg">Live preview</button> &nbsp; &nbsp;
+          <button type="button" class="btn btn-info btn-lg">Create gallery</button>
+        </div>      
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#MainCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#MainCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
 @endsection
