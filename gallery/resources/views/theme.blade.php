@@ -3,7 +3,7 @@
 @section('content')
  <div class="row">
   <div class="col-lg-12">
-    <div class="c_next"><a href="/theme"><p align="right">Next <i class="fa fa-arrow-right"></i></p></a></div>
+    <div class="c_next"><a href="{{ url('/theme') }}"><p align="right">Next <i class="fa fa-arrow-right"></i></p></a></div>
   </div>
 </div>
 

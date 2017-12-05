@@ -25,7 +25,9 @@ Route::get('/register', function () {
     return view('/application/register');
 });
 
-
+Route::get('/theme', function () {
+    return view('/theme');
+});
 
 Route::get('/gallery', function () {
     return view('/albums');
