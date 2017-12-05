@@ -8,7 +8,7 @@
   </div>
 
   <div class="col-lg-6">
-    <div class="t_next"><a href="{{ url('/theme') }}"><p align="right">Next <i class="fa fa-arrow-right"></i></p></a></div>
+    <div class="t_next"><a href="{{ url('/final') }}"><p align="right">Next <i class="fa fa-arrow-right"></i></p></a></div>
   </div>
 </div>
 

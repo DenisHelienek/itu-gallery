@@ -177,3 +177,10 @@
     box-shadow: 0 0 10px #9ecaed;
 }
 
+/* Final site */
+.f_back p{
+	font-size: 2.7em !important;
+	margin-top: 30px;
+	margin-left: 70px;
+	color: black !important;	
+}
