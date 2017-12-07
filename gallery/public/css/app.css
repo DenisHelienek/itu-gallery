@@ -22,6 +22,10 @@
 	color: white !important;	
 }
 
+.dropdown-menu a{
+    color: black !important;
+}
+
 /* Buttons */
 .btn {
   border-radius: 0 !important;
