@@ -54,13 +54,13 @@
 
 <div class="row">
   <div class="squares">
-    <div class="square light"></div>
+    <a href="#"><div class="square light"></div></a>
   
-    <div class="square dark"></div>
+    <a href="#"><div class="square dark"></div></a>
   
-    <div class="square aqua"></div> 
+    <a href="#"><div class="square aqua"></div></a> 
 
-    <div class="square artist"></div>  
+    <a href="#"><div class="square artist"></div></a>  
   </div>
 </div>
 

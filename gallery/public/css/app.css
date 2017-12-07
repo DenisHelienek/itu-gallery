@@ -159,22 +159,22 @@
 
 .artist:hover {
     border-color: #9ecaed;
-    box-shadow: 0 0 10px #9ecaed;
+    box-shadow: 0 0 30px #9ecaed;
 }
 
 .aqua:hover {
     border-color: #9ecaed;
-    box-shadow: 0 0 10px #9ecaed;
+    box-shadow: 0 0 30px #9ecaed;
 }
 
 .light:hover {
     border-color: #9ecaed;
-    box-shadow: 0 0 10px #9ecaed;
+    box-shadow: 0 0 30px #9ecaed;
 }
 
 .dark:hover {
     border-color: #9ecaed;
-    box-shadow: 0 0 10px #9ecaed;
+    box-shadow: 0 0 30px #9ecaed;
 }
 
 /* Final site */
