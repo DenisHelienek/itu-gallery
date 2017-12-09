@@ -31,7 +31,14 @@
 
               $albums = DB::select('select * from albums where id_user = :id', ['id' => \Auth::user()->id]);
               foreach ($albums as $album) {
-                  echo '<li><a href="gallery?name=' . $album->name . '" style="cursor: pointer;">' . $album->name . '</a></li>';
+                  echo '<li>';
+                    echo '<div class="albumName">';
+                      echo '<a href="gallery?name=' . $album->name . '">' . $album->name . '</a>';
+                      echo '<a class="edit" onclick="">';
+                        echo '<i class="glyphicon glyphicon-pencil"></i>';
+                      echo '</a>';
+                    echo '</div>';
+                  echo '</li>';
               }
             ?>
           </div>
@@ -63,8 +70,13 @@
                         echo '<div id="wrapper" class="photos-list">';
                     }
                           echo '<div class="col-lg-2">';
-                            echo '<img src="' . asset($image->path_ico) . '" class="img-thumbnail">';
-                            echo '<p id="0" class="changeable" contenteditable="true">' . $image->name . '</p>';
+                            echo '<div class="imageField">';
+                              echo '<img src="' . asset($image->path_ico) . '" class="img-thumbnail">';
+                              echo '<a class="remove" onclick="">';
+                                echo '<i class="glyphicon glyphicon-remove"></i>';
+                              echo '</a>';
+                              echo '<p id="0" class="changeable" contenteditable="true">' . $image->name . '</p>';
+                            echo '</div>';
                           echo '</div>';
                     if($i % 5 == 4) {
                         echo '</div>';

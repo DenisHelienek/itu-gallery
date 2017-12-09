@@ -82,6 +82,10 @@ body {
 	margin-left: 0px;
 }
 
+.albums {
+  text-align: center;
+}
+
 .albums-list li {
 	font-size: 1.3em !important;
 	margin-left: 20px;
@@ -91,10 +95,29 @@ body {
     color: black !important;
 }
 
+.albumName {
+  width: 100%;
+  overflow: hidden;
+  float: left;
+  cursor: pointer;
+  position: relative;
+}
+
+a.edit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+}
+
+.albumName:hover a.edit {
+  display: block;
+}
+
 .photos ul {
 	font-size: 1.3em !important;
 	list-style-type: none;
-    padding-left: 0;
+  padding-left: 0;
 }
 
 .photos img {
@@ -105,7 +128,7 @@ body {
 .photos p {
 	font-size: 1.1em !important;
 	width: 100%;
-    text-align: center;
+  text-align: center;
 }
 
 .photos a {
@@ -114,12 +137,27 @@ body {
 
 .photos-list {
 	background-color: white;
-    display: inline-block;
-    width: 100%;
+  display: inline-block;
+  width: 100%;
 }
 
-.photos-list img:hover{
-	opacity: .5;	
+.imageField {
+   position: relative;
+}
+
+.imageField:hover img {
+	opacity: 0.5;	
+}
+
+.imageField a.remove {
+  position: absolute;
+  top: 0
+  right 0;
+  display: none;
+}
+
+.imageField:hover a.remove {
+  display: block;
 }
 
 /* --- Theme --- */
