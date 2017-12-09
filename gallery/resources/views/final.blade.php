@@ -22,13 +22,13 @@
 
   <div class="demo">
     <div class="row">
-        <button>DEMO</button>  
+        <a target="_blank" href="/show"><button>DEMO</button></a>  
     </div>
   </div>
 
   <div class="download">     
     <div class="row">
-      <button>DOWNLOAD</button>  
+      <a href="{{ asset('web.html') }}" download><button>DOWNLOAD</button></a>  
     </div>
   </div>
 
