@@ -22,7 +22,7 @@
 
   <div class="demo">
     <div class="row">
-        <button>DEMO</button>  
+        <a target="_blank" href="/show"><button>DEMO</button></a>  
     </div>
   </div>
 
