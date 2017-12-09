@@ -17,3 +17,10 @@ $(document).ready(function()
 		}
 	});
 });
+
+function createAlbum() {
+    var albumName = prompt("Please enter album name:", "Album");
+    if (albumName != null && albumName != "") {
+        window.location.href="gallery?name=" + albumName;
+    }
+}
