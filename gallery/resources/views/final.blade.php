@@ -28,7 +28,7 @@
 
   <div class="download">     
     <div class="row">
-      <button>DOWNLOAD</button>  
+      <a href="{{ asset('web.html') }}" download><button>DOWNLOAD</button></a>  
     </div>
   </div>
 
