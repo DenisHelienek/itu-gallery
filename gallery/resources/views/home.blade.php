@@ -13,16 +13,16 @@
       <div class="item active">
         <img src="{{ asset('img/main1.jpg') }}" alt="Image">
         <div class="carousel-caption">
-          <button type="button" class="btn btn-success btn-lg">Live preview</button> &nbsp; &nbsp;
-          <button type="button" class="btn btn-info btn-lg">Create gallery</button>
+          <a class="btn btn-success btn-lg" href="/demo">Live preview</a>&nbsp; &nbsp;
+          <a class="btn btn-info btn-lg" href="/gallery">Create gallery</a>
         </div>      
       </div>
 
       <div class="item">
         <img src="{{ asset('img/main2.jpg') }}" alt="Image">
         <div class="carousel-caption">
-          <button type="button" class="btn btn-success btn-lg">Live preview</button> &nbsp; &nbsp;
-          <button type="button" class="btn btn-info btn-lg">Create gallery</button>
+          <a class="btn btn-success btn-lg" href="/demo">Live preview</a>&nbsp; &nbsp;
+          <a class="btn btn-info btn-lg" href="/gallery">Create gallery</a>
         </div>      
       </div>
     </div>

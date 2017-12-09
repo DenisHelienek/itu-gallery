@@ -3,9 +3,10 @@
 @section('content')
 <div class="container-fluid">
   <div class="row">
-    <div class="col-lg-12">
+    <div class="col-lg-2">
       <div class="t_back"><a href="/theme" style="text-decoration: none"><p align="left"><i class="fa fa-arrow-left"></i> Back</p></a></div>
     </div>
+    <div class="col-lg-10"></div>
   </div>
 
 

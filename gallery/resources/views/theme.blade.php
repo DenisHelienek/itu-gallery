@@ -3,11 +3,11 @@
 @section('content')
 <div class="container-fluid">
  <div class="row">
-    <div class="col-lg-6">
+    <div class="col-lg-2">
       <div class="t_back"><a href="{{ url('/gallery') }}" style="text-decoration: none"><p align="left"><i class="fa fa-arrow-left"></i> Back</p></a></div>
     </div>
-
-    <div class="col-lg-6">
+    <div class="col-lg-8"></div>
+    <div class="col-lg-2">
       <div class="t_next"><a href="{{ url('/final') }}" style="text-decoration: none"><p align="right">Next <i class="fa fa-arrow-right"></i></p></a></div>
     </div>
   </div>
@@ -24,7 +24,7 @@
     <div class="row">
       <div class="col-lg-4"></div>
         <div class="col-lg-4">
-          <input id="s1" data-slider-id='slider' type="text" data-slider-min="0" data-slider-max="6" data-slider-step="1" data-slider-value="3"/>
+          <input id="s1" data-slider-id='slider' type="text" data-slider-min="2" data-slider-max="8" data-slider-step="1" data-slider-value="5"/>
         </div>
       <div class="col-lg-4"></div>
     </div>
@@ -40,7 +40,7 @@
     <div class="row">
       <div class="col-lg-4"></div>
         <div class="col-lg-4">
-          <input id="s2" data-slider-id='slider' type="text" data-slider-min="0" data-slider-max="7" data-slider-step="1" data-slider-value="4"/>
+          <input id="s2" data-slider-id='slider' type="text" data-slider-min="2" data-slider-max="8" data-slider-step="1" data-slider-value="5"/>
         </div>
       <div class="col-lg-4"></div>
     </div>

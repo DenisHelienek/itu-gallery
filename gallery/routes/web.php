@@ -13,10 +13,6 @@ Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/user', function () {
-    return view('/application/user');
-});
-
 Route::get('/login', function () {
     return view('/application/login');
 });
@@ -25,31 +21,35 @@ Route::get('/register', function () {
     return view('/application/register');
 });
 
-Route::get('/theme', function () {
-    return view('/theme');
+Route::group(['middleware' => ['auth']], function() {
+    Route::get('/theme', function () {
+        return view('/theme');
+    });
+
+    Route::get('/final', function () {
+        return view('/final');
+    });
+
+    Route::get('/gallery', function () {
+        return view('/albums');
+    });
+
+    Route::get('/albums', function () {
+        return view('/application/albums');
+    });
+
+    Route::get('/parameters', function () {
+        return view('/application/parameters');
+    });
+
+    Route::get('/demo', function () {
+        return view('/application/demo');
+    });
+
+    Route::get('/user', function () {
+        return view('/application/user');
+    });
 });
-
-Route::get('/final', function () {
-    return view('/final');
-});
-
-Route::get('/gallery', function () {
-    return view('/albums');
-});
-
-Route::get('/albums', function () {
-    return view('/application/albums');
-});
-
-Route::get('/parameters', function () {
-    return view('/application/parameters');
-});
-
-Route::get('/demo', function () {
-    return view('/application/demo');
-});
-
-
 
 Auth::routes();
 
