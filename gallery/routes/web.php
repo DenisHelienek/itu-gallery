@@ -46,6 +46,10 @@ Route::group(['middleware' => ['auth']], function() {
         return view('/application/demo');
     });
 
+    Route::get('/show', function () {
+        return view('/show');
+    });
+
     Route::get('/user', function () {
         return view('/application/user');
     });
