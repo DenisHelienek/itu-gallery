@@ -78,30 +78,6 @@
 
       </div>
     </div>
-
-    <script type="text/javascript">
-      $(function(){
-      
-        $('body').on("click", ".changeable", function(e){
-          
-          var text = $(this).text();
-          
-          $(this).html("<input type='text' class='input-editable' value='" + text + "'>");
-          
-          $(this).find('input').focus();
-        });
-        
-        $('body').on("blur", ".input-editable", function(e){
-          
-          var text = $(this).val();
-        
-          $(this).parent().html(text);
-          
-          console.log("Value changes to: " + text);
-        });
-
-      });
-    </script>
   </div>
 </div> 
     
