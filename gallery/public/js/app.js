@@ -24,3 +24,10 @@ function createAlbum() {
         window.location.href="gallery?name=" + albumName;
     }
 }
+
+function renameAlbum(name) {
+    var albumName = prompt("Please enter album name:", name);
+    if (albumName != null && albumName != "") {
+        window.location.href="gallery?name=" + albumName + "&changed=" + name;
+    }
+}
