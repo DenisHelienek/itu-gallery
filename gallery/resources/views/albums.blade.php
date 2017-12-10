@@ -104,20 +104,26 @@
                     }
                   }
                 }
-              }
-        ?>
-        <div class="row">
-          {!! Form::open([ 'route' => [ 'dropzone.uploadfile' ], 'files' => true, 'class' => 'dropzone','id'=>"image-upload"]) !!}
-          
-          {!! Form::close() !!}
 
+                echo '<div class="row">';
+                  //parse_str('http://127.0.0.1:8000/gallery?albumName=Album4', $output);
+                  //dd($output);
+                  echo Form::open([ 'route' => array('dropzone.uploadfile', 'albumName=' . $albumName), 'files' => true, 'class' => 'dropzone','id'=>"image-upload"]);
+              
+                  echo Form::close();
+
+                echo '</div>';
+
+              }
+              
+        ?>
+        
           <script type="text/javascript">
               Dropzone.options.imageUpload = {
                   acceptedFiles: ".jpeg,.jpg,.png,.gif"
               };
           </script>
 
-        </div>
       </div>
     </div>
   </div>

@@ -28,12 +28,24 @@ class HomeController extends Controller
     }
 
     public function dropzoneFile(){
-        return view('dropzone_file_upload');
+        return view('albums');
     }
 
     public function dropzoneUploadFile(Request $request){
         $imageName = time().'.'.$request->file->getClientOriginalExtension();
-        $request->file->move(public_path('storage/' . \Auth::user()->id . '/'), $imageName);
+
+        $arg = parse_url($request->fullUrl(), PHP_URL_QUERY);
+        parse_str($arg, $output);
+/*
+        error_log($output['albumName']);
+
+        $album = DB::select('select * from albums where id_user = ?', [\Auth::user()->id]);
+
+        error_log("asdasd");
+
+        DB::insert('insert into images (name, filename, id_user, id_album) values (?, ?, ?, ?)', [$output['albumName'], $imageName, \Auth::user()->id, $album[0]->id]);
+*/
+        $request->file->move(public_path('storage/' . \Auth::user()->id . '/' . $output['albumName'] . '/'), $imageName);
         return response()->json(['success'=>$imageName]);
     }
 }
