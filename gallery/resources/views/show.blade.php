@@ -17,6 +17,8 @@
   }
 ?>
 
+&nbsp;
+
 <div class="container text-center">    
 <div class="theme-color">
 <div class="row">
