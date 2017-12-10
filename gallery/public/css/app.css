@@ -281,3 +281,13 @@ body {
   width: 375px;
 	margin: 0 auto;
 }
+
+/* Show demo */
+
+.show {
+    margin-left: 150px;
+}
+
+.show img {
+    margin-bottom: 20px;
+}

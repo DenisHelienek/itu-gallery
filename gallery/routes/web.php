@@ -26,6 +26,10 @@ Route::group(['middleware' => ['auth']], function() {
         return view('/theme');
     });
 
+    Route::get('/show', function () {
+        return view('show');
+    });
+
     Route::get('/final', function () {
         return view('/final');
     });
