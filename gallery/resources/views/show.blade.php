@@ -11,10 +11,7 @@
     }
   }
   $albums = DB::select('select * from albums where id_user = :id', ['id' => \Auth::user()->id]);
-  foreach ($albums as $album) {
-      //echo '<li><a href="#" style="cursor: pointer;">' . $album->name . '</a></li>';
-      break;
-  }
+
 ?>
 
 &nbsp;
@@ -26,7 +23,11 @@
 
     <h1>Gallery demonstration</h1>
 
-    <p class="page-description text-center">{{ $album->name}}</p>
+    <?php
+  	foreach ($albums as $album) {
+  	   echo "<a href=\"#\"> $album->name </a> ";	
+  	}
+    ?>
     
     <div class="tz-gallery">
 
