@@ -80,6 +80,13 @@
       </a>  
     </div>
   </div>
+
+  <script type="text/javascript">
+    $('.square-container').on('click', function() {
+      $('.square-container').removeClass('selected');
+      $(this).addClass('selected');
+    });
+  </script>
 </div>
 
 @endsection
