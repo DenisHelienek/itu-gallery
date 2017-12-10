@@ -23,7 +23,7 @@ Route::get('/register', function () {
 
 Route::group(['middleware' => ['auth']], function() {
     Route::get('/theme', function () {
-        return view('/theme');
+        return view('theme');
     });
 
     Route::get('/show', function () {
@@ -31,15 +31,11 @@ Route::group(['middleware' => ['auth']], function() {
     });
 
     Route::get('/final', function () {
-        return view('/final');
-    });
-
-    Route::get('/gallery', function () {
-        return view('/albums');
+        return view('final');
     });
 
     Route::get('/albums', function () {
-        return view('/application/albums');
+        return view('albums');
     });
 
     Route::get('/parameters', function () {

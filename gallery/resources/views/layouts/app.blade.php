@@ -48,7 +48,7 @@
                 </div>
 
                 <ul class="nav navbar-nav">
-                    <li><a href="/gallery">Create gallery</a></li>
+                    <li><a href="/albums">Create gallery</a></li>
                     <li><a href="/examples">Examples</a></li>
                     <li><a href="/about">About</a></li>                   
                 </ul>

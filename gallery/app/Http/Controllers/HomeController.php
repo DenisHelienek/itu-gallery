@@ -39,7 +39,7 @@ class HomeController extends Controller
 /*
         error_log($output['albumName']);
 
-        $album = DB::select('select * from albums where id_user = ?', [\Auth::user()->id]);
+        $album = DB::select('select * from albums where id_user = ? and name = ?', [\Auth::user()->id, $output['albumName']]);
 
         error_log("asdasd");
 

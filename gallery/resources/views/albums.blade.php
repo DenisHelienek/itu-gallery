@@ -49,7 +49,7 @@
               foreach ($albums as $album) {
                   echo '<li>';
                     echo '<div class="albumName">';
-                      echo '<a href="gallery?albumName=' . $album->name . '">' . $album->name . '</a>';
+                      echo '<a href="albums?albumName=' . $album->name . '">' . $album->name . '</a>';
                       
                       echo '<a class="edit" onclick="renameAlbum(\'' . $album->name . '\')">';
                         echo '<i class="glyphicon glyphicon-pencil"></i>';
@@ -65,17 +65,16 @@
 
     <div class="col-lg-8">
       <div class="photos">
-        
 
         <?php
 
               if(isset($_GET["albumName"])){
                 $albumName = $_GET["albumName"];
 
-                if(DB::select('select * from albums where name = :albName', ['albName' => $albumName]) != null) {
-                  $album = DB::select('select * from albums where name = :albName', ['albName' => $albumName]);
+                if(DB::select('select * from albums where name = ? and id_user = ?', [$albumName, \Auth::user()->id]) != null) {
+                  $album = DB::select('select * from albums where name = ? and id_user = ?', [$albumName, \Auth::user()->id]);
 
-                  $images = DB::select('select * from images where id_user = ? and id_album = ?', [\Auth::user()->id, $album[0]->id]);
+                  $images = DB::select('select * from images where id_album = ?', [$album[0]->id]);
 
                   $albumStorage = \Auth::user()->id . "/" . $album[0]->name . "/";
 
@@ -106,7 +105,7 @@
                 }
 
                 echo '<div class="row">';
-                  //parse_str('http://127.0.0.1:8000/gallery?albumName=Album4', $output);
+                  //parse_str('http://127.0.0.1:8000/albums?albumName=Album4', $output);
                   //dd($output);
                   echo Form::open([ 'route' => array('dropzone.uploadfile', 'albumName=' . $albumName), 'files' => true, 'class' => 'dropzone','id'=>"image-upload"]);
               
