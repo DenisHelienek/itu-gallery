@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -24,5 +25,15 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+
+    public function dropzoneFile(){
+        return view('dropzone_file_upload');
+    }
+
+    public function dropzoneUploadFile(Request $request){
+        $imageName = time().'.'.$request->file->getClientOriginalExtension();
+        $request->file->move(public_path('storage/' . \Auth::user()->id . '/'), $imageName);
+        return response()->json(['success'=>$imageName]);
     }
 }

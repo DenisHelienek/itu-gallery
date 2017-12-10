@@ -18,8 +18,8 @@
           <div class="albums-list">
             <?php
 
-              if(isset($_GET["name"])){
-                $newAlbumName = $_GET["name"];
+              if(isset($_GET["albumName"])){
+                $newAlbumName = $_GET["albumName"];
 
                 if(isset($_GET["changed"])){
                   $originalName = $_GET["changed"];
@@ -49,7 +49,7 @@
               foreach ($albums as $album) {
                   echo '<li>';
                     echo '<div class="albumName">';
-                      echo '<a href="gallery?name=' . $album->name . '">' . $album->name . '</a>';
+                      echo '<a href="gallery?albumName=' . $album->name . '">' . $album->name . '</a>';
                       
                       echo '<a class="edit" onclick="renameAlbum(\'' . $album->name . '\')">';
                         echo '<i class="glyphicon glyphicon-pencil"></i>';
@@ -63,16 +63,14 @@
       </div>
     </div>
 
-    <div class="col-lg-10">
+    <div class="col-lg-8">
       <div class="photos">
-        <ul>
-          <li><a href="#"><i class="fa fa-plus"></i> Add photos</a></li>
-        </ul>
+        
 
         <?php
 
-              if(isset($_GET["name"])){
-                $albumName = $_GET["name"];
+              if(isset($_GET["albumName"])){
+                $albumName = $_GET["albumName"];
 
                 if(DB::select('select * from albums where name = :albName', ['albName' => $albumName]) != null) {
                   $album = DB::select('select * from albums where name = :albName', ['albName' => $albumName]);
@@ -81,11 +79,12 @@
 
                   $albumStorage = \Auth::user()->id . "/" . $album[0]->name . "/";
 
+                  $numItems = count($images);
                   $i = 0;
 
                   foreach ($images as $image) {
                     //dd(asset("storage/" . $albumStorage . $image->filename));
-                    if($i % 5 == 0) {
+                    if($i % 4 == 0) {
                       echo '<div class="row">';
                         echo '<div id="wrapper" class="photos-list">';
                     }
@@ -98,16 +97,27 @@
                               echo '<p id="0" class="changeable" contenteditable="true">' . $image->name . '</p>';
                             echo '</div>';
                           echo '</div>';
-                    if($i % 5 == 4) {
+                    $i++;
+                    if($i % 4 == 0 || ($i === $numItems)) {
                         echo '</div>';
                       echo '</div>';
                     }
-                    $i++;
                   }
                 }
               }
         ?>
+        <div class="row">
+          {!! Form::open([ 'route' => [ 'dropzone.uploadfile' ], 'files' => true, 'class' => 'dropzone','id'=>"image-upload"]) !!}
+          
+          {!! Form::close() !!}
 
+          <script type="text/javascript">
+              Dropzone.options.imageUpload = {
+                  acceptedFiles: ".jpeg,.jpg,.png,.gif"
+              };
+          </script>
+
+        </div>
       </div>
     </div>
   </div>
