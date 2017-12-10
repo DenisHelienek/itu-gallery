@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-
+<div class="container text-center">    
 <div class="row">
 	<div class="col-lg-4"></div>
 	<div class="col-lg-4"><h1>Album DEMO</h1></div>
@@ -27,6 +27,7 @@
 		<div class="col-lg-4"><img src="{{ asset('img/cat.jpg') }}" width="75%"></div>
 	</div>		
 </div>   
+</div><br>
 
 @endsection
 
