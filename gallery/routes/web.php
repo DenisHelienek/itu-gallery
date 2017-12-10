@@ -63,3 +63,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('dropzoneFile','HomeController@dropzoneFile') ;
+
+Route::post('dropzoneUploadFile',array('as'=>'dropzone.uploadfile','uses'=>'HomeController@dropzoneUploadFile')) ;
